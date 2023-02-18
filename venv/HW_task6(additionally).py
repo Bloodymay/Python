@@ -1,0 +1,14 @@
+num = int(input('Введите шестизначный номер билета: '))
+b = num // 100000
+c = (num // 10000) % 10
+d = (num // 1000) % 10
+e = (num // 100 ) % 10
+f = (num // 10) % 10
+g = num % 10
+
+left_side = b + c + d
+right_side = e + f + g
+if left_side == right_side:
+    print('Билет счастливый! =)')
+else:
+    print('Билет не счастливый =(')
