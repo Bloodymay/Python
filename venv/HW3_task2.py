@@ -16,12 +16,23 @@
 например, my_list = [7, 5, 3, 3, 2].
 """
 
-my_list = input('Введите список: ').split(',')
-my_num = int(input('Введите натуральное число: '))
+
+my_list = []
+n = int(input('Введите длину списка: '))
+
+for i in range(0, n):
+    ele = int(input())
+
+    my_list.append(ele)
+
+
+my_num = int(input('Введите новое значение в рейтинге: '))
 for i in range(len(my_list)):
-    if my_num == my_list[i]:
-        my_list.insert(my_list[i], my_num)
-        i += 1
+    if my_num > 0:
+        my_list.append(my_num)
+        my_list.sort(reverse=True)
+        print(f"Новый рейтинг: {my_list}")
+        break
     else:
-        print(f'Число {my_num} отсутствует в списке, вставка невозможна')
-        i += 1
+        print("Ошибка. Вы ввели не натуральное число")
+
