@@ -24,6 +24,6 @@ def num_reverse(my_num):
         global reverse_num
         temp = my_num % 10
         reverse_num = (reverse_num * 10) + temp
-        num_reverse(my_num//10)
+        num_reverse(my_num // 10)
     return reverse_num
 print(f'Число в обратном порядке: {num_reverse(my_num)}')
