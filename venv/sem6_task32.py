@@ -11,4 +11,4 @@ for index, i in enumerate(my_int_list):
     if i >= min_value and i <= max_value:
         index_list.append((index, i))
 
-print(f'Значения в заданном диапаpоне в формате индекс-значение: {index_list}')
+print(f'Значения в заданном диапазоне в формате индекс-значение: {index_list}')
