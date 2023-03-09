@@ -13,4 +13,4 @@ while i <= el_count - 1:
     first_el = first_el + (el_count - 1) * difference
     arith_progr.append(first_el)
     i += 1
-print(arith_progr)
+print(f'Арифметическая прогрессия с заданными параметрами: {arith_progr}')
