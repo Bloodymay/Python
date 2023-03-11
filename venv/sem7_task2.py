@@ -19,17 +19,18 @@ length (длина в метрах), width (ширина в метрах).
 class Road:
     weight = 25
 
-def __init__(self,length,width):
-    self._length = length
-    self._width = width
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
 
-def total_weigth(self, thickness):
-    res = self._length * self._width * thickness * self.weight
-    return res
+    def total_weigth(self, thickness):
+        res = self._length * self._width * thickness * self.weight
+        #print(f'Вес асфальта, требуемый для укладки полотна толщиной {thickness} см, равен {res//1000} т')
+        return res
+
 obj = Road(int(input('Введите длину: ')), int(input('Введите ширину: ')))
-total_weigth_result = obj.total_weight(int(input('Введите толщину: ')))
+total_weigth_result = obj.total_weigth(int(input('Введите толщину: ')))
 
-
-print(f'Для покрытия полотна с такими параметрами потребуется {total_weigth_result//1000} тонн асфальта. ')
+print(f'Для покрытия полотна с такими параметрами потребуется {total_weigth_result // 1000} тонн(ы) асфальта. ')
 
 
