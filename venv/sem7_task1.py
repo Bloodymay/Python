@@ -21,19 +21,20 @@ import colorama
 from colorama import Fore, Style
 
 class TrafficLight:
-    __color1 = 'red'
-    __color2 = 'yellow'
-    __color3 = 'green'
+    __color = ''
 
 a = TrafficLight()
 
-def running(self, *args):
-    print(Fore.RED + a._TrafficLight__color1)
+def running(self):
+    a._TrafficLight__color = 'red'
+    print(Fore.RED + a._TrafficLight__color)
     time.sleep(7)
-    print(Fore.YELLOW + a._TrafficLight__color2)
+    a._TrafficLight__color = 'yellow'
+    print(Fore.YELLOW + a._TrafficLight__color)
     time.sleep(2)
-    print(Fore.GREEN + a._TrafficLight__color3)
+    a._TrafficLight__color = 'green'
+    print(Fore.GREEN + a._TrafficLight__color)
     time.sleep(10)
     print(Style.RESET_ALL + 'Done!')
 
-print(running(a._TrafficLight__color1, a._TrafficLight__color2, a._TrafficLight__color3))
+print(running(a._TrafficLight__color))
