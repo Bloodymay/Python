@@ -22,6 +22,28 @@ from colorama import Fore, Style
 
 
 class TrafficLight:
+    def __init__(self,color):
+        self.__color = color
+
+
+    def running(self):
+        a._TrafficLight__color = 'red'
+        print(Fore.RED + a._TrafficLight__color)
+        time.sleep(7)
+        a._TrafficLight__color = 'yellow'
+        print(Fore.YELLOW + a._TrafficLight__color)
+        time.sleep(2)
+        a._TrafficLight__color = 'green'
+        print(Fore.GREEN + a._TrafficLight__color)
+        time.sleep(10)
+        print(Style.RESET_ALL + 'Done!')
+
+a = TrafficLight(' ')
+a.running()
+
+
+'''
+class TrafficLight:
     __color = ''
 
 
@@ -39,5 +61,6 @@ class TrafficLight:
 
 a = TrafficLight()
 a.running()
+'''
 
 
