@@ -9,12 +9,14 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
-my_list = [b'attribute', b'класс', b'функция', b'type']
+my_list = ['attribute', 'класс', 'функция', 'type']
+my_bytes_list = []
 
 for i in  my_list:
     try:
-        print(f'Тип переменной: {type(i)}')
-        print(f'Содержимое переменной: {i}')
-        print(f'Длина переменной: {len(i)}')
-    except SyntaxError:
+        my_list = bytes(i, encoding = 'ascii')
+    except UnicodeEncodeError:
         print(f'Строка {i} написана на кириллице. Перевод в байты невозможен!')
+    else:
+        my_bytes_list.append(i)
+print(f'{my_bytes_list} - слова,которые могут быть представлены в байтовом формате.' )
